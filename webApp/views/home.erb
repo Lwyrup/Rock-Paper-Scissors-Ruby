@@ -1,0 +1,47 @@
+<head>
+	<title>Rock, Paper, Scissors</title>
+	<link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+<div id="home-box">
+<h1>Rock, Paper, Scissors</h1>
+
+<p>Knights select thine weapons!</p>
+
+<form action = "/home" method = "post">
+		
+	<select class = "weapon" name="weapon_one">
+		<option value = "---">---</option>
+		<option value = "rock">Rock</option>
+		<option value = "paper">Paper</option>
+		<option value = "scissors">Scissors</option>
+	</select>
+	
+	<select class = "weapon2" name="weapon_two">
+		<option value = "---">---</option>
+		<option value = "rock">Rock</option>
+		<option value = "paper">Paper</option>
+		<option value = "scissors">Scissors</option>
+	</select>
+
+	<input type = "submit" value="Duel!">
+</form>
+
+<table>
+	<th>Scores</th>
+	<tr class="weapon">
+		<td> Knight_1: </td>
+		<td><%= $scoreOne %></td>
+	</tr>
+	<tr class="weapon2">
+		<td> Knight_2: </td>
+		<td><%= $scoreTwo %></td>
+	</tr>
+</table>
+
+
+<h3><%= @message %></h3>
+</div>
+</body>
